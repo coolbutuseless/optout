@@ -103,7 +103,7 @@ Orig PNG
 
 </h4>
 
-<img src="man/figures/png-orig.png"      />
+<img  width="100%" src="man/figures/png-orig.png"      />
 
 </div>
 
@@ -119,7 +119,7 @@ pngquant - space saving 66%
 
 </h4>
 
-<img src="man/figures/png-pngquant.png"  />
+<img  width="100%" src="man/figures/png-pngquant.png"  />
 
 </div>
 
@@ -131,7 +131,7 @@ pngcrush - space saving 31%
 
 </h4>
 
-<img src="man/figures/png-pngcrush.png"  />
+<img  width="100%" src="man/figures/png-pngcrush.png"  />
 
 </div>
 
@@ -143,7 +143,7 @@ optipng - space saving 33%
 
 </h4>
 
-<img src="man/figures/png-optipng.png"   />
+<img  width="100%" src="man/figures/png-optipng.png"   />
 
 </div>
 
@@ -155,7 +155,7 @@ zopflipng - space saving 43%
 
 </h4>
 
-<img src="man/figures/png-zopflipng.png" />
+<img  width="100%" src="man/figures/png-zopflipng.png" />
 
 </div>
 
@@ -204,7 +204,7 @@ Orig JPG
 
 </h4>
 
-<span>.</span> <img src="man/figures/jpg-orig.jpg"      />
+<span>.</span> <img  width="100%" src="man/figures/jpg-orig.jpg"      />
 
 </div>
 
@@ -217,7 +217,7 @@ jpegoptim - lossless
 </h4>
 
 Space saving 18%
-<img src="man/figures/jpg-jpegoptim-lossless.jpg"      />
+<img  width="100%" src="man/figures/jpg-jpegoptim-lossless.jpg"      />
 
 </div>
 
@@ -230,7 +230,7 @@ jpegoptim - target size 50kB
 </h4>
 
 Space saving 66%
-<img src="man/figures/jpg-jpegoptim-lossy-size.jpg"      />
+<img  width="100%" src="man/figures/jpg-jpegoptim-lossy-size.jpg"      />
 
 </div>
 
@@ -243,7 +243,7 @@ jpegoptim - target quality 10
 </h4>
 
 Space saving 77%
-<img src="man/figures/jpg-jpegoptim-lossy-quality.jpg"      />
+<img  width="100%" src="man/figures/jpg-jpegoptim-lossy-quality.jpg"      />
 
 </div>
 
@@ -269,7 +269,7 @@ Orig PDF
 
 </h4>
 
-<span>.</span> <img src="man/figures/pdf-orig.png"      />
+<span>.</span> <img  width="100%" src="man/figures/pdf-orig.png"      />
 
 </div>
 
@@ -281,7 +281,7 @@ pdfopt
 
 </h4>
 
-Space saving 33% <img src="man/figures/pdf-pdfopt.png"  />
+Space saving 33% <img  width="100%" src="man/figures/pdf-pdfopt.png"  />
 
 </div>
 

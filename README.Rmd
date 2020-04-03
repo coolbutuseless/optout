@@ -123,7 +123,7 @@ r4 <- zopflipng(infile = "man/figures/png-orig.png", outfile = "man/figures/png-
 
 <div style="width:45%; float:left;">
 <h4>Orig PNG</h4>
-<img src="man/figures/png-orig.png"      />
+<img  width="100%" src="man/figures/png-orig.png"      />
 </div>
 
 </div>
@@ -133,22 +133,22 @@ r4 <- zopflipng(infile = "man/figures/png-orig.png", outfile = "man/figures/png-
 
 <div style="width:45%; float:left;">
 <h4>pngquant - space saving `r round(r1$space_saving * 100)`% </h4>
-<img src="man/figures/png-pngquant.png"  />
+<img  width="100%" src="man/figures/png-pngquant.png"  />
 </div>
 
 <div style="width:45%; float:left;">
 <h4>pngcrush - space saving `r round(r2$space_saving * 100)`% </h4>
-<img src="man/figures/png-pngcrush.png"  />
+<img  width="100%" src="man/figures/png-pngcrush.png"  />
 </div>
 
 <div style="width:45%; float:left;">
 <h4>optipng - space saving `r round(r3$space_saving * 100)`% </h4>
-<img src="man/figures/png-optipng.png"   />
+<img  width="100%" src="man/figures/png-optipng.png"   />
 </div>
 
 <div style="width:45%; float:left;">
 <h4>zopflipng - space saving `r round(r4$space_saving * 100)`% </h4>
-<img src="man/figures/png-zopflipng.png" />
+<img  width="100%" src="man/figures/png-zopflipng.png" />
 </div>
 
 </div>
@@ -191,25 +191,25 @@ r7 <- jpegoptim(
 <div style="width:45%; float:left;">
 <h4>Orig JPG</h4>
 <span>.</span>
-<img src="man/figures/jpg-orig.jpg"      />
+<img  width="100%" src="man/figures/jpg-orig.jpg"      />
 </div>
 
 <div style="width:45%; float:left;">
 <h4>jpegoptim - lossless </h4>
 Space saving `r round(r5$space_saving * 100)`% 
-<img src="man/figures/jpg-jpegoptim-lossless.jpg"      />
+<img  width="100%" src="man/figures/jpg-jpegoptim-lossless.jpg"      />
 </div>
 
 <div style="width:45%; float:left;">
 <h4>jpegoptim - target size 50kB </h4>
 Space saving `r round(r6$space_saving * 100)`% 
-<img src="man/figures/jpg-jpegoptim-lossy-size.jpg"      />
+<img  width="100%" src="man/figures/jpg-jpegoptim-lossy-size.jpg"      />
 </div>
 
 <div style="width:45%; float:left;">
 <h4>jpegoptim - target quality 10 </h4>
 Space saving `r round(r7$space_saving * 100)`% 
-<img src="man/figures/jpg-jpegoptim-lossy-quality.jpg"      />
+<img  width="100%" src="man/figures/jpg-jpegoptim-lossy-quality.jpg"      />
 </div>
 
 </div>
@@ -231,13 +231,13 @@ r8 <- pdfopt(infile = "man/figures/pdf-orig.pdf", outfile = "man/figures/pdf-pdf
 <div style="width:45%; float:left;">
 <h4>Orig PDF</h4>
 <span>.</span>
-<img src="man/figures/pdf-orig.png"      />
+<img  width="100%" src="man/figures/pdf-orig.png"      />
 </div>
 
 <div style="width:45%; float:left;">
 <h4>pdfopt</h4>
 Space saving `r round(r8$space_saving * 100)`% 
-<img src="man/figures/pdf-pdfopt.png"  />
+<img  width="100%" src="man/figures/pdf-pdfopt.png"  />
 </div>
 
 
