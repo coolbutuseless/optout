@@ -15,10 +15,13 @@ consistent call interface.
 Tools are included for interfacing command line tools for compressing
 JPG, PNG and PDF files.
 
-**My use case** - the vignettes for
+### My Use Case
+
+The vignettes for
 [ggpattern](https:/github.com/coolbutuseless/ggpattern) are huge because
-of the image example, and I wanted to be able to optimize and compress
-images from within the vignette *Rmd* files.
+of all the image-based examples. I want to be able to optimize and
+compress the vignette images from within the *Rmd* files to try and keep
+the packge under a reasonable size.
 
 ## Security Warning
 
