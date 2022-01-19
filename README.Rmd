@@ -33,7 +33,7 @@ JPG, PNG and PDF files.
 
 ### My Use Case
 
-The vignettes for [ggpattern](https:/github.com/coolbutuseless/ggpattern) 
+The vignettes for [ggpattern](https://github.com/coolbutuseless/ggpattern) 
 are huge because of all the image-based examples. I want to be able to optimize and 
 compress the vignette images from within the *Rmd* files to try and keep 
 the packge under a reasonable size.
