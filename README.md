@@ -18,10 +18,10 @@ JPG, PNG and PDF files.
 ### My Use Case
 
 The vignettes for
-[ggpattern](https:/github.com/coolbutuseless/ggpattern) are huge because
-of all the image-based examples. I want to be able to optimize and
-compress the vignette images from within the *Rmd* files to try and keep
-the packge under a reasonable size.
+[ggpattern](https://github.com/coolbutuseless/ggpattern) are huge
+because of all the image-based examples. I want to be able to optimize
+and compress the vignette images from within the *Rmd* files to try and
+keep the packge under a reasonable size.
 
 ## Security Warning
 
@@ -45,26 +45,26 @@ command line programs. If a particular utility is not installed, the
 package will still load fine, but you will not be able to use that
 particular compression type.
 
-  - PNG compression
-      - [pngquant](https://pngquant.org/)
-      - [optpng](http://optipng.sourceforge.net/)
-      - [pngcrush](https://pmt.sourceforge.io/pngcrush/)
-      - [zopfli + zopflipng](https://github.com/google/zopfli)
-  - JPEG compression
-      - [jpegoptim](https://github.com/tjko/jpegoptim)
-  - PDF compression
-      - [ghostscript](https://www.ghostscript.com/)
+-   PNG compression
+    -   [pngquant](https://pngquant.org/)
+    -   [optpng](http://optipng.sourceforge.net/)
+    -   [pngcrush](https://pmt.sourceforge.io/pngcrush/)
+    -   [zopfli + zopflipng](https://github.com/google/zopfli)
+-   JPEG compression
+    -   [jpegoptim](https://github.com/tjko/jpegoptim)
+-   PDF compression
+    -   [ghostscript](https://www.ghostscript.com/)
 
 ## Overview of available compressors
 
-| filetype | compressor | lossless | default options                                                         |
-| -------- | ---------- | -------- | ----------------------------------------------------------------------- |
-| png      | pngquant   | no       | speed = 4, dither = FALSE                                               |
-| png      | pngcrush   | yes      | brute = FALSE                                                           |
-| png      | optipng    | yes      | level = 1                                                               |
-| png      | zopflipng  | yes      | lossy\_alpha = FALSE, lossy\_8bit = FALSE, more = FALSE, insane = FALSE |
-| jpeg     | jpegoptim  | optional | quality = NULL, size = NULL (i.e. lossless)                             |
-| pdf      | pdfopt     | no       | quality = ‘screen’                                                      |
+| filetype | compressor | lossless | default options                                                       |
+|----------|------------|----------|-----------------------------------------------------------------------|
+| png      | pngquant   | no       | speed = 4, dither = FALSE                                             |
+| png      | pngcrush   | yes      | brute = FALSE                                                         |
+| png      | optipng    | yes      | level = 1                                                             |
+| png      | zopflipng  | yes      | lossy_alpha = FALSE, lossy_8bit = FALSE, more = FALSE, insane = FALSE |
+| jpeg     | jpegoptim  | optional | quality = NULL, size = NULL (i.e. lossless)                           |
+| pdf      | pdfopt     | no       | quality = ‘screen’                                                    |
 
 ## Sample Plot
 
@@ -87,7 +87,7 @@ ggsave("man/figures/pdf-orig.pdf", p, width = 6, height = 4)
 
 ``` r
 r1 <- pngquant (infile = "man/figures/png-orig.png", outfile = "man/figures/png-pngquant.png" , verbosity = 1)
-#> pngquant: 146162 -> 50128  Space Saving: 65.7%
+#> pngquant: 146162 -> 50031  Space Saving: 65.8%
 r2 <- pngcrush (infile = "man/figures/png-orig.png", outfile = "man/figures/png-pngcrush.png" , verbosity = 1)
 #> pngcrush: 146162 -> 100636  Space Saving: 31.1%
 r3 <- optipng  (infile = "man/figures/png-orig.png", outfile = "man/figures/png-optipng.png"  , verbosity = 1)
@@ -101,9 +101,7 @@ r4 <- zopflipng(infile = "man/figures/png-orig.png", outfile = "man/figures/png-
 <div style="width:45%; float:left;">
 
 <h4>
-
 Orig PNG
-
 </h4>
 
 <img  width="100%" src="man/figures/png-orig.png"      />
@@ -117,9 +115,7 @@ Orig PNG
 <div style="width:45%; float:left;">
 
 <h4>
-
 pngquant - space saving 66%
-
 </h4>
 
 <img  width="100%" src="man/figures/png-pngquant.png"  />
@@ -129,9 +125,7 @@ pngquant - space saving 66%
 <div style="width:45%; float:left;">
 
 <h4>
-
 pngcrush - space saving 31%
-
 </h4>
 
 <img  width="100%" src="man/figures/png-pngcrush.png"  />
@@ -141,9 +135,7 @@ pngcrush - space saving 31%
 <div style="width:45%; float:left;">
 
 <h4>
-
 optipng - space saving 33%
-
 </h4>
 
 <img  width="100%" src="man/figures/png-optipng.png"   />
@@ -153,9 +145,7 @@ optipng - space saving 33%
 <div style="width:45%; float:left;">
 
 <h4>
-
 zopflipng - space saving 43%
-
 </h4>
 
 <img  width="100%" src="man/figures/png-zopflipng.png" />
@@ -165,6 +155,7 @@ zopflipng - space saving 43%
 </div>
 
 <div style="clear:both;" />
+
 
 
 
@@ -185,7 +176,7 @@ r6 <- jpegoptim(
   size      = 50,  
   verbosity = 1
 )
-#> jpegoptim: 154167 -> 52125  Space Saving: 66.2%
+#> jpegoptim: 154167 -> 52118  Space Saving: 66.2%
 
 
 r7 <- jpegoptim(
@@ -194,7 +185,7 @@ r7 <- jpegoptim(
   quality   = 10,
   verbosity = 1
 )
-#> jpegoptim: 154167 -> 35333  Space Saving: 77.1%
+#> jpegoptim: 154167 -> 35352  Space Saving: 77.1%
 ```
 
 <div>
@@ -202,21 +193,17 @@ r7 <- jpegoptim(
 <div style="width:45%; float:left;">
 
 <h4>
-
 Orig JPG
-
 </h4>
 
-<span>.</span> <img  width="100%" src="man/figures/jpg-orig.jpg"      />
+. <img  width="100%" src="man/figures/jpg-orig.jpg"      />
 
 </div>
 
 <div style="width:45%; float:left;">
 
 <h4>
-
 jpegoptim - lossless
-
 </h4>
 
 Space saving 18%
@@ -227,9 +214,7 @@ Space saving 18%
 <div style="width:45%; float:left;">
 
 <h4>
-
 jpegoptim - target size 50kB
-
 </h4>
 
 Space saving 66%
@@ -240,9 +225,7 @@ Space saving 66%
 <div style="width:45%; float:left;">
 
 <h4>
-
 jpegoptim - target quality 10
-
 </h4>
 
 Space saving 77%
@@ -255,11 +238,12 @@ Space saving 77%
 <div style="clear:both;" />
 
 
+
 ## Example: Optimizing PDF output
 
 ``` r
 r8 <- pdfopt(infile = "man/figures/pdf-orig.pdf", outfile = "man/figures/pdf-pdfopt.pdf", verbosity = 1)
-#> pdfopt: 13896 -> 9243  Space Saving: 33.5%
+#> pdfopt: 13896 -> 15731  Space Saving: -13.2%
 ```
 
 <div>
@@ -267,30 +251,28 @@ r8 <- pdfopt(infile = "man/figures/pdf-orig.pdf", outfile = "man/figures/pdf-pdf
 <div style="width:45%; float:left;">
 
 <h4>
-
 Orig PDF
-
 </h4>
 
-<span>.</span> <img  width="100%" src="man/figures/pdf-orig.png"      />
+. <img  width="100%" src="man/figures/pdf-orig.png"      />
 
 </div>
 
 <div style="width:45%; float:left;">
 
 <h4>
-
 pdfopt
-
 </h4>
 
-Space saving 33% <img  width="100%" src="man/figures/pdf-pdfopt.png"  />
+Space saving -13%
+<img  width="100%" src="man/figures/pdf-pdfopt.png"  />
 
 </div>
 
 </div>
 
 <div style="clear:both;" />
+
 
 
 ## Speed
@@ -301,4 +283,4 @@ file.
 `zopflipng` is the exception and with higher compression options you
 will see the heat death of the universe before you will see it finish.
 Even at its lowest settings (the default) it will take tens-of-seconds
-up to several minutes to compress a file. **Use with caution\!**
+up to several minutes to compress a file. **Use with caution!**
